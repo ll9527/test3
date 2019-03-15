@@ -1,0 +1,31 @@
+<view class='padding_10'>
+  <view >
+    <view class='box1_top box2_bottom titleBox'>
+      <view>时间</view>
+      <view>状态</view>
+    </view>
+    <view class='box2'>
+      <view class='image'>
+        <image class='image' src='/images/tuan.png'></image>
+      </view>
+      <view class='box2_right'>
+        <view class='box1_bottom'>商品名字</view>
+        <view class='box1_top'>型号：</view>
+        <view class='box1_top box2_bottom'>
+          <view class='red'>￥ 100</view>
+          <view>X 5</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- ---------------------------------------------------     -->
+  <view class='box1_top flex_jc_end text padding_r20'>
+    <view>合计：</view>
+    <view class='red'>￥ 500</view>
+  </view>
+  <!-- ---------------------------------------------------     -->
+  <view class='box1_top flex_jc_end text'>
+    <view class='button margin '>取消订单</view>
+    <view class='red button border_red margin '>支付</view>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<form bindsubmit="formSubmit">
+  <input class='inputBox' name="title" maxlength="25" type="text" placeholder="请输入商品标题"></input>
+  <view class='text'>注：商品标题最长25个汉字</view>
+
+    <input class='inputBox' name="num" maxlength="3" type="number" placeholder="请输入商品库存数量"></input>
+    <view class='text'>注：商品最大库存</view>
+
+    <input class='inputBox' name="freight" maxlength="3" type="number" placeholder="商品运费"></input>
+    <view class='text'>注：商品运费</view>
+
+    <view class='text'>型号：{{version}}</view>
+    <input class='inputBox' maxlength="10" value='{{versionValue}}' bindconfirm="addVersion" type="text" placeholder="请输入商品型号"></input>
+    <view class='text'>例如：衣服的M和L码数,输入一个型号按键盘上的完成,再输入下一个型号</view>
+
+    <view class='text'>型号（颜色）：{{version1}}</view>
+    <input class='inputBox' maxlength="10" value='{{versionValue}}' bindconfirm="addVersion1" type="text" placeholder="请输入商品型号"></input>
+    <view class='text'>例如：颜色,输入一个型号按键盘上的完成,再输入下一个型号</view>
+    
+<input class='inputBox' name="price" maxlength="10" type="digit" placeholder="商品价钱"></input>
+    <view class='text'>注：这个是商品正价</view>
+
+<input class='inputBox' name="groupPrice" maxlength="10" type="digit" placeholder="商品团购价"></input>
+    <view class='text'>注：如不参加团购，不输入即可</view>
+
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{twoLevelName}}" >
+    <view class="inputBox picker">
+      类型：{{index? twoLevelName[index]:"请点选择类型"}}
+    </view>
+  </picker>
+</view>
+
+
+
+<image src='{{item}}' mode="widthFix" style='width:670rpx;' wx:for="{{headPhoto}}" wx:key="{{index}}"></image>
+<view class='text'>点击按钮上传产品头像,建议750px*750px</view>
+<view class='button' catchtap='seeHeadPhoto'>上传产品头像图片</view>
+
+<image src='{{item}}' mode="widthFix" style='width:670rpx;' wx:for="{{detailsPhoto}}" wx:key="{{index}}"></image>
+<view class='text'>点击按钮上传产品详情图,建议宽度710px的图片</view>
+<view class='button' catchtap='seeDetailsPhoto'>上传产品详情图</view>
+
+<button form-type="submit">提交</button>
+</form>
